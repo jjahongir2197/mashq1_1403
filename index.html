@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Students Age</title>
+
+<style>
+
+body {
+font-family: Arial;
+background-color: #eef;
+padding: 20px;
+}
+
+.card {
+background-color: white;
+padding: 15px;
+margin: 10px;
+border-radius: 10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Students Age</h1>
+
+{% for s in students %}
+
+<div class="card">
+
+<h2>{{ s.name }}</h2>
+
+<p>Age: {{ s.age }}</p>
+
+</div>
+
+{% endfor %}
+
+<h2>Average Age: {{ average_age }}</h2>
+
+<h2>Oldest: {{ oldest.name }}</h2>
+
+<h2>Youngest: {{ youngest.name }}</h2>
+
+</body>
+</html>
